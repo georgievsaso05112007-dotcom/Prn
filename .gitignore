@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+*.egg
+.eggs/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# ML checkpoints (keep .gitkeep)
+backend/ml/models/checkpoints/*.pt
+backend/ml/models/checkpoints/*.pkl
+backend/ml/models/checkpoints/*.json
+!backend/ml/models/checkpoints/.gitkeep
+
+# Node / React Native
+node_modules/
+mobile/node_modules/
+.expo/
+*.jsbundle
+
+# iOS
+mobile/ios/Pods/
+mobile/ios/build/
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+
+# Android
+mobile/android/.gradle/
+mobile/android/app/build/
+mobile/android/build/
+*.keystore
+!debug.keystore
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3

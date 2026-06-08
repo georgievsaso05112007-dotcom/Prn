@@ -11,8 +11,8 @@ import 'dotenv/config';
 const { SHOPIFY_STORE_URL, SHOPIFY_ACCESS_TOKEN, SHOPIFY_API_VERSION = '2024-01' } = process.env;
 
 if (!SHOPIFY_STORE_URL || !SHOPIFY_ACCESS_TOKEN) {
-  console.error('ERROR: SHOPIFY_STORE_URL and SHOPIFY_ACCESS_TOKEN must be set in .env');
-  process.exit(1);
+  console.error('WARNING: SHOPIFY_STORE_URL and SHOPIFY_ACCESS_TOKEN not set in .env');
+  console.error('The server will start but Shopify API calls will fail until you configure these.');
 }
 
 // Build the base URL for every API call

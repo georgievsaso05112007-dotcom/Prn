@@ -219,4 +219,13 @@ export const schemas = {
       tone:             { type: 'string', enum: ['professional', 'friendly', 'empathetic', 'formal'], description: 'Response tone' },
     },
   },
+
+  summarizeSupportTicket: {
+    type: 'object',
+    required: ['ticketText'],
+    properties: {
+      ticketText:     { type: 'string', description: 'The full support ticket text to summarize' },
+      customerEmail:  { type: 'string', description: 'Customer email for context lookup' },
+    },
+  },
 };

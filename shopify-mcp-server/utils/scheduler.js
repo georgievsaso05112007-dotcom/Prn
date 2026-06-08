@@ -45,7 +45,7 @@ export function schedulePost({ platform, content, imageUrl, scheduledTime, postF
     scheduledPosts.delete(id);
   });
 
-  scheduledPosts.set(id, { id, platform, content, imageUrl, scheduledTime: date.toISOString(), cronExpr });
+  scheduledPosts.set(id, { id, platform, content, imageUrl, scheduledTime: date.toISOString(), cronExpr, task });
 
   return { id, status: 'scheduled', scheduledTime: date.toISOString() };
 }

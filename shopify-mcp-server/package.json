@@ -1,0 +1,29 @@
+{
+  "name": "shopify-mcp-server",
+  "version": "1.0.0",
+  "description": "Complete Shopify MCP Server with AI automation, social media, inventory forecasting, and more",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "start:http": "node server-http.js",
+    "dev": "node --watch server.js",
+    "dev:http": "node --watch server-http.js",
+    "test": "node test.js",
+    "test:tool": "node test.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.0",
+    "express": "^4.18.0",
+    "node-cron": "^3.0.3",
+    "p-queue": "^8.0.1",
+    "zod": "^3.22.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": ["shopify", "mcp", "ai", "automation"],
+  "license": "MIT"
+}

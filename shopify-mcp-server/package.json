@@ -6,7 +6,11 @@
   "type": "module",
   "scripts": {
     "start": "node server.js",
-    "dev": "node --watch server.js"
+    "start:http": "node server-http.js",
+    "dev": "node --watch server.js",
+    "dev:http": "node --watch server-http.js",
+    "test": "node test.js",
+    "test:tool": "node test.js"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",

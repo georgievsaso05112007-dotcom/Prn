@@ -1,0 +1,26 @@
+# render.yaml — Free deployment config for Render.com
+# HOW TO USE:
+#   1. Push this repo to GitHub
+#   2. Go to render.com → New → Web Service
+#   3. Connect your GitHub repo
+#   4. Render will automatically read this file
+#   5. Add your environment variables in the Render dashboard
+
+services:
+  - type: web
+    name: shopify-ai-mcp-server
+    runtime: node
+    plan: free           # Free tier — starts up in ~30 seconds when idle
+    buildCommand: npm install
+    startCommand: node server-http.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      # Add these in the Render dashboard (never commit real secrets):
+      # SHOPIFY_STORE_URL
+      # SHOPIFY_ACCESS_TOKEN
+      # AI_PROVIDER
+      # GROQ_API_KEY  (or whichever provider you chose)
+      # SHOPIFY_WEBHOOK_SECRET

@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "shopify-ai": {
+      "command": "node",
+      "args": ["/absolute/path/to/shopify-mcp-server/server.js"],
+      "env": {
+        "SHOPIFY_STORE_URL": "your-store.myshopify.com",
+        "SHOPIFY_ACCESS_TOKEN": "shpat_xxx",
+        "AI_PROVIDER": "groq",
+        "GROQ_API_KEY": "gsk_xxx"
+      }
+    }
+  }
+}
